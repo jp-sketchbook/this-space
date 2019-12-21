@@ -14,7 +14,8 @@ public class RevolverZ : MonoBehaviour
     void Update()
     {
         zRotation += Speed * Time.deltaTime;
-        if(zRotation >= 180f) zRotation = zRotation - 180f; // Keep the 'change' for smooth rotation
+        if(zRotation >= 180f) zRotation -= 180f;
+        else if (zRotation <= -180f) zRotation += 180f;
         transform.rotation = Quaternion.Euler(
             transform.rotation.eulerAngles.x,
             transform.rotation.eulerAngles.y,
