@@ -673,8 +673,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  scaleFactor: 0
-  targetScaleFactor: 0.6
-  fadeInSpeed: 1.6
-  fadeOutSpeed: 0.4
+  scaleFactorA: 0
   scaleFactorB: 1
+  targetScaleFactor: 0.6
+  fadeInSpeed: 1.2
+  fadeOutSpeed: 0.4

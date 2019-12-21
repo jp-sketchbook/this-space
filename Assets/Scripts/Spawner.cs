@@ -64,7 +64,7 @@ public class Spawner : MonoBehaviour
             Random.Range(0, 180),
             Random.Range(0, 180)
         );
-        var obj = pools[Random.Range(0, pools.Count - 1)].GetFromPool() as MagicalObject;
+        var obj = pools[Random.Range(0, pools.Count)].GetFromPool() as MagicalObject;
         var material = materials[Random.Range(0, materials.Count - 1)];
         obj.Show(randomPosition, randomRotation, scaleFactor, material);
         Debug.Log("SHOW MAGICAL OBJECT");
