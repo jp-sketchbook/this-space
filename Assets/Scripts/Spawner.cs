@@ -67,18 +67,19 @@ public class Spawner : MonoBehaviour
         var obj = pools[Random.Range(0, pools.Count)].GetFromPool() as MagicalObject;
         var material = materials[Random.Range(0, materials.Count - 1)];
         obj.Show(randomPosition, randomRotation, scaleFactor, material);
-        Debug.Log("SHOW MAGICAL OBJECT");
-        Debug.Log(obj);
-        InvokeNext();
-    }
-
-    private void InvokeNext() {
-        float delay = Random.Range(minInterval, maxInterval);
-        Invoke("PlaceMagicalObject", delay);
     }
 
     private IEnumerator SpawnRoutine() {
         isSpawning = true;
+        StartCoroutine(SpawnShadowRoutine());
+        while(isSpawning) {
+            yield return new WaitForSeconds(Random.Range(minInterval, maxInterval));
+            PlaceMagicalObject();
+        }
+    }
+
+    // More interesting results with two spawning 'threads'
+    private IEnumerator SpawnShadowRoutine() {
         while(isSpawning) {
             yield return new WaitForSeconds(Random.Range(minInterval, maxInterval));
             PlaceMagicalObject();
