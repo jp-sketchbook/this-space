@@ -2267,5 +2267,5 @@ MonoBehaviour:
   alpha: 0
   targetAlpha: 0.8
   fadeInSpeed: 1.8
-  fadeOutSpeed: 0.6
+  fadeOutSpeed: 0.3
   scaleFactor: 1

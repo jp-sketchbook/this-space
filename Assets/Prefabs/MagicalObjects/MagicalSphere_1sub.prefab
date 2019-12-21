@@ -673,9 +673,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  color: {r: 1, g: 0, b: 0.7978473, a: 0}
-  alpha: 0
-  targetAlpha: 0.6
+  scaleFactor: 0
+  targetScaleFactor: 0.6
   fadeInSpeed: 1.6
-  fadeOutSpeed: 0.8
-  scaleFactor: 1
+  fadeOutSpeed: 0.4
+  scaleFactorB: 1
