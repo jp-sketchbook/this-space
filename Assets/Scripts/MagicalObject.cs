@@ -12,15 +12,17 @@ public class MagicalObject : MonoBehaviour
     public float targetScaleFactor = 0.8f;
     public float fadeInSpeed = 1.4f;
     public float fadeOutSpeed = 0.8f;
-    private Dictionary<MagicalObjectState, Action> StateUpdates;
-    private Action<MagicalObject> onFadeOut;
-    new private Renderer renderer;
+    private Dictionary<MagicalObjectState, Action> _stateUpdates;
+    private Action<MagicalObject> _onFadeOut;
+    private Renderer _renderer;
+    private AudioSource _source;
 
     // Start is called before the first frame update
     void Start()
     {   
-        renderer = gameObject.GetComponent<Renderer>();
-        StateUpdates = new Dictionary<MagicalObjectState, Action>() {
+        _renderer = gameObject.GetComponent<Renderer>();
+        _source = gameObject.GetComponent<AudioSource>();
+        _stateUpdates = new Dictionary<MagicalObjectState, Action>() {
             { MagicalObjectState.NONE, UpdateNone },
             { MagicalObjectState.FADE_IN, UpdateFadeIn },
             { MagicalObjectState.BE, UpdateBe },
@@ -33,7 +35,7 @@ public class MagicalObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StateUpdates[state]();
+        _stateUpdates[state]();
     }
 
     private void UpdateScale() {
@@ -70,6 +72,10 @@ public class MagicalObject : MonoBehaviour
             scaleFactorA = targetScaleFactor;
             UpdateScale();
         }
+        _source.time = 0f;
+        _source.pitch = 1f;
+        _source.volume = 0.8f;
+        _source.Play();
         state = MagicalObjectState.FADE_OUT;
     }
 
@@ -82,21 +88,27 @@ public class MagicalObject : MonoBehaviour
         else {
             scaleFactorA = 0f;
             state = MagicalObjectState.NONE;
-            if(onFadeOut != null) onFadeOut(this);
+            if(_onFadeOut != null) _onFadeOut(this);
         }
 
     }
 
     public void SetOnFadeOutCallback(Action<MagicalObject> action) {
-        onFadeOut = action;
+        _onFadeOut = action;
     }
 
-    public void Show(Vector3 pos, Vector3 rot, float scaleFactor, Material material) {
-        renderer.material = material;
+    public void Show(Vector3 pos, Vector3 rot, float scaleFactor, Material material, AudioClip clip) {
+        _renderer.material = material;
+        _source.clip = clip;
         this.scaleFactorB = scaleFactor;
         gameObject.transform.position = pos;
         gameObject.transform.eulerAngles = rot;
         state = MagicalObjectState.FADE_IN;
+
+        _source.time = 0.45f;
+        _source.pitch = -1f;
+        _source.volume = 0.3f;
+        _source.Play();
     }
 }
 

@@ -58,5 +58,13 @@ MonoBehaviour:
   origin: {x: 0, y: 0.5, z: 0}
   minScale: 0.1
   maxScale: 0.8
-  minInterval: 0.33
+  minInterval: 0.2
   maxInterval: 12
+  clips:
+  - {fileID: 8300000, guid: 4d9447e32e43b40e294bc144b1907524, type: 3}
+  - {fileID: 8300000, guid: 1575272dba0d14da98e42ad859af3558, type: 3}
+  - {fileID: 8300000, guid: cf34ae627ed0b489eb281a94725195f9, type: 3}
+  - {fileID: 8300000, guid: 270d786fa023c46c0ba1554cd00e5909, type: 3}
+  - {fileID: 8300000, guid: 1de0dcfa75bb74cd0b1a5da9b099884b, type: 3}
+  - {fileID: 8300000, guid: 9e2acaeb2e84e4d7982be3a2aadd4730, type: 3}
+  - {fileID: 8300000, guid: 540deba25439d44659c26e4b6c4574e0, type: 3}
