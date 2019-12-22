@@ -679,7 +679,7 @@ MonoBehaviour:
   scaleFactorB: 1
   targetScaleFactor: 0.6
   fadeInSpeed: 0.8
-  fadeOutSpeed: 0.4
+  fadeOutSpeed: 0.05
 --- !u!82 &2295819170714355689
 AudioSource:
   m_ObjectHideFlags: 0

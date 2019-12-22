@@ -6731,7 +6731,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29660
+  m_Name: pb_Mesh25848
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7017,7 +7017,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29554
+  m_Name: pb_Mesh21960
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8448,7 +8448,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24808
+  m_Name: pb_Mesh25488
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8774,7 +8774,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29434
+  m_Name: pb_Mesh21860
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13876,7 +13876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14399,6 +14399,11 @@ PrefabInstance:
       propertyPath: alpha
       value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 2090083456329447035, guid: c9cce4f62717a473d8f4e8d7f05eff64,
+        type: 3}
+      propertyPath: fadeOutSpeed
+      value: 0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 2295819170714355689, guid: c9cce4f62717a473d8f4e8d7f05eff64,
         type: 3}
       propertyPath: m_PlayOnAwake
@@ -14437,6 +14442,11 @@ PrefabInstance:
         type: 3}
       propertyPath: alpha
       value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2235319647041614198, guid: 7dc4094042cd044368b66f39bf6a926c,
+        type: 3}
+      propertyPath: fadeOutSpeed
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 2235319647041614199, guid: 7dc4094042cd044368b66f39bf6a926c,
         type: 3}
@@ -14676,6 +14686,11 @@ PrefabInstance:
       propertyPath: origin.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4459957269919110803, guid: a90c4f134530540689350a45a1cb78e1,
+        type: 3}
+      propertyPath: prefabCount
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 4459957269919110812, guid: a90c4f134530540689350a45a1cb78e1,
         type: 3}
       propertyPath: m_Name
@@ -14700,6 +14715,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1403837670}
+    - target: {fileID: 5092660534179063608, guid: ae8694d4901d24eb7bf0591d36a54a71,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092660534179063608, guid: ae8694d4901d24eb7bf0591d36a54a71,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5092660534494416329, guid: ae8694d4901d24eb7bf0591d36a54a71,
         type: 3}
       propertyPath: m_Mesh
@@ -14710,6 +14735,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1547502471}
+    - target: {fileID: 5092660534622212092, guid: ae8694d4901d24eb7bf0591d36a54a71,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092660534622212092, guid: ae8694d4901d24eb7bf0591d36a54a71,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5092660534626686186, guid: ae8694d4901d24eb7bf0591d36a54a71,
         type: 3}
       propertyPath: m_Mesh
@@ -14725,6 +14760,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 896452725}
+    - target: {fileID: 5092660534707250774, guid: ae8694d4901d24eb7bf0591d36a54a71,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5092660535161025678, guid: ae8694d4901d24eb7bf0591d36a54a71,
         type: 3}
       propertyPath: m_LocalPosition.x
